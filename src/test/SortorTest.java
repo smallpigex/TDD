@@ -9,7 +9,8 @@ import org.junit.Test;
 import example.Sortor;
 
 public class SortorTest {
-     
+	private Sortor sortor = new Sortor();
+	
 	@Before
 	public void setUp() throws Exception {
 	}
@@ -20,10 +21,13 @@ public class SortorTest {
 
 	@Test
 	public void testSortValue() {
-		int[] values = new int[] {1};
-		Sortor sortor = new Sortor();
-		int[] result = sortor.sortValue(values);
-		assertArrayEquals(new int[] {1}, result);
+		int[] testValues1 = new int[] {1};
+		int[] result1 = sortor.sortValue(testValues1);
+		assertArrayEquals(new int[] {1}, result1);
+		
+		int[] testValues2 = new int[] {2, 1};
+		int[] result2 = sortor.sortValue(testValues2);
+		assertArrayEquals(new int[] {1, 2}, result2);
 	}
 
 }
