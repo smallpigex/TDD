@@ -28,6 +28,10 @@ public class SortorTest {
 		int[] testValues2 = new int[] {2, 1};
 		int[] result2 = sortor.sortValue(testValues2);
 		assertArrayEquals(new int[] {1, 2}, result2);
+		
+		int[] testValues3 = new int[] {4, 5, 3, 2, 1};
+		int[] result3 = sortor.sortValue(testValues3);
+		assertArrayEquals(new int[] {1, 2, 3, 4, 5}, result3);
 	}
 
 }
