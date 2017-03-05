@@ -2,11 +2,15 @@ package example;
 
 public class Sortor {
   public int[] sortValue(int[] values) {
-	  
-	  if(values.length > 1 && values[0] > values[1]) {
-		  int tmp = values[0];
-		  values[0] = values[1];
-		  values[1] = tmp;
+	  //Bubble Sort
+	  for(int i = 0; i < values.length; i++) {
+		  for(int j = 0; j < values.length; j++) {
+			  if(values[i] > values[j]) {
+				  int tmp = values[i];
+				  values[i] = values[j];
+				  values[j] = tmp;
+			  }
+		  }
 	  }
 	  return values;
   }
